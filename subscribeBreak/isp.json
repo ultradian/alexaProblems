@@ -1,0 +1,57 @@
+
+{
+  "version": "1.0",
+  "type": "SUBSCRIPTION",
+  "referenceName": "premium_content",
+  "subscriptionInformation": {
+    "subscriptionPaymentFrequency": "MONTHLY",
+    "subscriptionTrialPeriodDays": 7
+  },
+  "publishingInformation": {
+    "locales": {
+      "en-US": {
+        "name": "Premium content",
+        "summary": "premium subscription extra good sound",
+        "description": "premium subscription give you extra good sound",
+        "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/d365/f9d71c5c6b5d4818b81165da7ab1f085/APP_ICON?versionId=K0xekm0ARc3uYtHZIzQWn16VMqdggOU3&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200609T040841Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAWBV6LQ4QDXWFVRR3%2F20200609%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=068498477e670f26d2ac1f233d9e9e371bbf79619b0a6c2ce843d7338cee6ba7",
+        "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/4aed/d64c3b3557e246738bb09e9ac47ae482/APP_ICON_LARGE?versionId=u8F.bHrLjZMHro1Qp3rZYmo5but_YbHL&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200609T040841Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIAWBV6LQ4QDXWFVRR3%2F20200609%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b7b2ca5261c69273e47f04bccf4d4739b497adcdc8ce393532fe5ebb8ac4c508",
+        "examplePhrases": [
+          "For Future Use – Example Phrase 1",
+          "For Future Use – Example Phrase 2",
+          "For Future Use – Example Phrase 3"
+        ],
+        "keywords": [
+          "For Future Use – Keywords"
+        ],
+        "customProductPrompts": {
+          "purchasePromptDescription": "A premium subscription gives you better sound.",
+          "boughtCardDescription": "You are now a premium subscriber"
+        }
+      }
+    },
+    "distributionCountries": [
+      "US"
+    ],
+    "pricing": {
+      "amazon.com": {
+        "releaseDate": "2020-06-07T00:00Z",
+        "defaultPriceListing": {
+          "price": 0.99,
+          "currency": "USD"
+        }
+      }
+    },
+    "taxInformation": {
+      "category": "INFORMATION_SERVICES"
+    }
+  },
+  "privacyAndCompliance": {
+    "locales": {
+      "en-US": {
+        "privacyPolicyUrl": "https://www.amazon.com"
+      }
+    }
+  },
+  "purchasableState": "PURCHASABLE"
+}
+

@@ -1,0 +1,25 @@
+[
+  {
+    "editableState": "EDITABLE",
+    "lastUpdated": "2020-06-07T03:35:33.048Z",
+    "nameByLocale": {
+      "en-US": "Premium content"
+    },
+    "pricing": {
+      "amazon.com": {
+        "defaultPriceListing": {
+          "currency": "USD",
+          "price": 0.99,
+          "primeMemberPrice": 0.8
+        },
+        "releaseDate": "2020-06-07T00:00:00Z"
+      }
+    },
+    "productId": "amzn1.adg.product.2e9a9736-1fc8-4442-a4ef-0f48ef451e1c",
+    "purchasableState": "PURCHASABLE",
+    "referenceName": "premium_content",
+    "stage": "development",
+    "status": "COMPLETE",
+    "type": "SUBSCRIPTION"
+  }
+]

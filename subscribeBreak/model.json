@@ -1,0 +1,103 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "tone therapy",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "TimeIntent",
+          "slots": [
+            {
+              "name": "duration",
+              "type": "AMAZON.DURATION"
+            }
+          ],
+          "samples": [
+            "I want {duration}",
+            "make it {duration}",
+            "{duration}",
+            "play for {duration}"
+          ]
+        },
+        {
+          "name": "CanBuyIntent",
+          "slots": [],
+          "samples": [
+            "what can I get extra",
+            "tell me about tone therapy premium",
+            "tell me about premium",
+            "what can I buy"
+          ]
+        },
+        {
+          "name": "BuyIntent",
+          "slots": [],
+          "samples": [
+            "I want tone therapy premium",
+            "subscribe me to premium",
+            "sign me up for premium",
+            "give me a subscription",
+            "I want to purchase",
+            "I want to buy",
+            "sign me up",
+            "subscribe me",
+            "I want to subscribe"
+          ]
+        },
+        {
+          "name": "RefundIntent",
+          "slots": [],
+          "samples": [
+            "cancel my tone therapy subscription",
+            "cancel premium",
+            "give me a refund",
+            "stop my subscription",
+            "cancel my subscription"
+          ]
+        }
+      ],
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "12"
+}
