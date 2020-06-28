@@ -18,6 +18,8 @@ def lambda_handler(event, context):
         return on_intent(event)
     elif event['request']['type'] == 'SessionEndedRequest':
         return on_session_ended(event)
+    elif request_type == 'Alexa.Presentation.APL.UserEvent':
+        return on_UserEvent(event)
     else:
         print("WARNING: Unhandled event in lambda_handler:", event)
         return stop_response(event)
@@ -52,6 +54,20 @@ def on_session_ended(event):
     }
 
 
+def on_UserEvent(event):
+    """Process on_UserEvent event.
+
+    Could be video_end or touch wrapper
+    """
+    print("DEBUG: got UserEvent", event)
+    arguments = event['request']['arguments']
+    if arguments[0] == 'itemSelected':
+        print("DEBUG: got itemSelected in on_UserEvent", event['request'])
+    else:
+        print("WARNING: unrecognized on_UserEvent", event['request'])
+        return {}
+
+
 def on_intent(event):
     """Process intent."""
     intent_name = event['request']['intent']['name']
@@ -60,12 +76,41 @@ def on_intent(event):
         return stop_response(event)
     elif intent_name in ('AMAZON.ScrollLeftIntent',
                          'AMAZON.ScrollRightIntent'):
-        msg = "got to scroll response. "
+        return scroll_response(event)
     else:
         msg = ""
     reprompt = "scroll more or stop. "
     msg += reprompt
     return service_response({}, ask_response(msg, reprompt))
+
+
+def scroll_response(event):
+    """
+    Scroll scroll_sequence left or right.
+
+    implemented as described at https://developer.amazon.com/en-US/docs/alexa/alexa-presentation-language/apl-standard-commands.html#scroll-command # noqa
+    """
+    request = event['request']
+    print(f"in scroll_response")
+    if request['intent']['name'] == 'AMAZON.ScrollRightIntent':
+        distance = 2
+        msg = "scrolled right. "
+    else:
+        distance = -2
+        msg = "scrolled left. "
+    reprompt = "scroll more or stop. "
+    msg += reprompt
+    response = ask_response(msg, reprompt)
+    # response = add_directive(response, {
+    #     "type": "Alexa.Presentation.APL.ExecuteCommands",
+    #     "token": "scrollCommandToken",
+    #     "commands": [{
+    #         "type": "Scroll",
+    #         "componentId": "scrollSequence",
+    #         "distance": distance
+    #     }]
+    # })
+    return service_response({}, response)
 
 
 def stop_response(event):
