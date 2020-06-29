@@ -30,3 +30,4 @@ The error message from the device log is:
     }
 }
 ```
+This has been reported to Amazon as Case ID 7135446991.
