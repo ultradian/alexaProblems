@@ -4,7 +4,7 @@
 
 **Reproduce**:
 * code to run is in [lambda_function.py](zip/lambda_function.py)
-* APL template is directly from Amazon "image forward list sample" except the `componentId` is defined as `scrollSequence` saved here as [apl_selection_template](zip/apl_selection_template)
+* APL template is directly from Amazon "image forward list sample" except the `componentId` is defined as `scrollSequence` saved here as [apl_selection_template](zip/apl_selection_template.json)
 zip both together and upload to lambda like:
 `zip -r scroll.zip * -x scroll.zip`
 `aws lambda update-function-code --function-name scroll_test --zip-file fileb://scroll.zip`
