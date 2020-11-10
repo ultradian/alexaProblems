@@ -1,5 +1,7 @@
 # AVG boundaries
-This is a problem I found by playing with APL VectorGraphics. I was trying to work in a component that took up the entire viewport, and create my own coordinate system by translating by `viewport.pixelwidth/2` and `viewport.pixelHeight/2`.  You can recreate this issue by load the json code [circle.json](circle.json ) into the Authoring tool. Or pasting it from below.
+This is a problem I found by playing with APL VectorGraphics. I was trying to work in a component that took up the entire viewport, and create my own coordinate system by translating by `viewport.pixelwidth/2` and `viewport.pixelHeight/2`.  I found different devices cut off the screen at different points.  Probably some definition of the screen boundaries, but I haven't found it yet. You can recreate this issue by either
+1) pasting the code from below into the Authoring tool, or
+2) load the json code [circle.json](circle.json ) into the Authoring tool
 
 in `graphics` I created a parameterized circle:
 ```
