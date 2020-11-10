@@ -105,15 +105,20 @@ then in `mainTemplate.items` I made a `Container` to hold it and data for 5 circ
     ]
 }
 ]
+```
+
 
 It shows up like I expect on the Echo Show2 preset:
 ![Echo Show2 screenshot](echoShow2.png)
 and the Hub for the Spot is fine as well.
 
+
 But the Echo Show1 preset cuts off part of the field, removing 1 circle:
 ![Echo Show1 screenshot](echoShow1.png)
 
+
 And the Echo Show5 preset cuts off more of the field, removing 2 and a half circles:
 ![Echo Show5 screenshot](echoShow5.png)
+
 
 The TV preset doesn't work at all, but I figured out that is because the number it generates for `viewport.pixelHeight/2` is wrong and puts it off the screen.  But the numbers for the other presets seem right.
