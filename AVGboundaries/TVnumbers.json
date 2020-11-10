@@ -1,0 +1,78 @@
+{
+    "document": {
+        "type": "APL",
+        "version": "1.4",
+        "settings": {},
+        "theme": "dark",
+        "import": [],
+        "resources": [],
+        "styles": {},
+        "onMount": [],
+        "graphics": {
+            "square": {
+                "type": "AVG",
+                "version": "1.0",
+                "height": 300,
+                "width": 300,
+                "items": [
+                    {
+                        "type": "group",
+                        "items": [
+                            {
+                                "type": "path",
+                                "pathData": "M30 30 v 140 h 140 v -140 h -140",
+                                "stroke": "red",
+                                "strokeWidth": 1,
+                                "fill": "red"
+                            }
+                        ],
+                        "transform": "skewX(-20)"
+                    }
+                ]
+            }
+        },
+        "layouts": {},
+        "mainTemplate": {
+            "parameters": [
+                "payload"
+            ],
+            "items": [
+                {
+                    "type": "Container",
+                    "id": "main_display",
+                    "bind": [
+                        {
+                            "name": "vwidth",
+                            "type": "number",
+                            "value": "${viewport.pixelWidth}"
+                        },
+                        {
+                            "name": "vheight",
+                            "type": "number",
+                            "value": "${viewport.pixelHeight}"
+                        }
+                    ],
+                    "width": "100vw",
+                    "height": "100vh",
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "items": [
+                        {
+                            "type": "Text",
+                            "text": "${vwidth} x ${vheight}"
+                        },
+                        {
+                            "type": "VectorGraphic",
+                            "id": "mysquare",
+                            "source": "square",
+                            "scale": "fill"
+                        }
+                    ],
+                    "direction": "column"
+                }
+            ]
+        }
+    },
+    "datasources": {},
+    "sources": {}
+}
